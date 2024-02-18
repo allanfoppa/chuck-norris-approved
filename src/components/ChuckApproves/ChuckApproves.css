@@ -1,0 +1,19 @@
+
+.approves-position {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.approves-position.animated {
+  animation: swingLeft 1s ease-in-out forwards;
+}
+
+@keyframes swingLeft {
+  0% {
+    transform: translateX(-30rem);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}

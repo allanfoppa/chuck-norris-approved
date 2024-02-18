@@ -1,6 +1,7 @@
 import { Resource, For, createSignal, createEffect, Show  } from 'solid-js'
 import { fetchByCategory } from '../../services/fetchByCategory.service'
 import { Loading, Sizes, Types } from '../Loading/Loading'
+import { ChuckApproves } from '../ChuckApproves/ChuckApproves'
 
 interface JokeByCategory {
   categories: string[],
@@ -31,7 +32,11 @@ export const SegmentedControl = ({
     value: ''
   })
 
+  // Create a signal to apply loader component
   const [ loading, setLoading ] = createSignal<boolean>(true)
+
+  // Create a signal to show Chuck approves when it arrives ten jokes
+  const [ count, setCount ] = createSignal<number>(0);
 
   // Update the selected category using the setter function
   const updateSelectedCategory = (newValue: string) => {
@@ -66,6 +71,7 @@ export const SegmentedControl = ({
 
   // Fetch by category
   const newJoke = async () => {
+    setCount(prev => prev + 1)
     setLoading(true)
     const fetchedData = await fetchByCategory({ category: category() })
     setJokeByCategory(fetchedData)
@@ -97,12 +103,16 @@ export const SegmentedControl = ({
               {jokeByCategory().value}
               <span class='quotation-marks'>”</span>
             </p>
+            <p>{count()}</p>
           </blockquote>
         </Show>
       </div>
       <div class='mt-8'>
         Get me a new one ... (press <kbd class="kbd kbd-sm">r</kbd> to refresh)
       </div>
+      <Show when={count() == 10}>
+        <ChuckApproves />
+      </Show>
     </section>
   )
 }
