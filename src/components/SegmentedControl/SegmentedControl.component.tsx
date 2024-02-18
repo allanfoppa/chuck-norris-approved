@@ -103,7 +103,6 @@ export const SegmentedControl = ({
               {jokeByCategory().value}
               <span class='quotation-marks'>”</span>
             </p>
-            <p>{count()}</p>
           </blockquote>
         </Show>
       </div>
