@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.quotation-marks {
+  font-family: Inter;
+  font-size: 2rem;
+  opacity: 0.5;
+  position: relative;
+  top: 4px;
+  margin: 0 2px;
+}
+
