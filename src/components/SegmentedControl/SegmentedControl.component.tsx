@@ -1,5 +1,6 @@
-import { Resource, For, createSignal, createEffect  } from 'solid-js'
+import { Resource, For, createSignal, createEffect, Show  } from 'solid-js'
 import { fetchByCategory } from '../../services/fetchByCategory.service'
+import { Loading, Sizes, Types } from '../Loading/Loading'
 
 interface JokeByCategory {
   categories: string[],
@@ -10,7 +11,6 @@ interface JokeByCategory {
   url: string,
   value: string,
 }
-
 
 export const SegmentedControl = ({
   categories,
@@ -90,20 +90,15 @@ export const SegmentedControl = ({
         </For>
       </div>
       <div>
-        {loading()
-          ? (
-            <span class="loading loading-dots loading-lg"></span>
-          )
-          : (
-            <blockquote>
-              <p class='text-lg'>
-                <span class='quotation-marks'>“</span>
-                {jokeByCategory().value}
-                <span class='quotation-marks'>”</span>
-              </p>
-            </blockquote>
-          )
-        }
+        <Show when={loading() == false} fallback={<Loading type={Types.Dots} size={Sizes.Large} />}>
+          <blockquote>
+            <p class='text-lg'>
+              <span class='quotation-marks'>“</span>
+              {jokeByCategory().value}
+              <span class='quotation-marks'>”</span>
+            </p>
+          </blockquote>
+        </Show>
       </div>
       <div class='mt-8'>
         Get me a new one ... (press <kbd class="kbd kbd-sm">r</kbd> to refresh)

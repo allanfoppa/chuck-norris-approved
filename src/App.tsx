@@ -1,12 +1,11 @@
 import { createResource } from 'solid-js'
-import './App.css'
 import { SegmentedControl } from './components/SegmentedControl/SegmentedControl.component';
 import { fetchCategories } from './services/fetchCategories.service';
 import { Logo } from './components/Logo/Logo';
 
 function App() {
 
-  const [categories] = createResource(fetchCategories);
+  const [categories] = createResource<string[]>(fetchCategories);
 
   return (
     <main class="container mx-auto">

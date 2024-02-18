@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  padding: 2rem;
+  text-align: center;
+}
+
 .quotation-marks {
   font-family: Inter;
   font-size: 2rem;
