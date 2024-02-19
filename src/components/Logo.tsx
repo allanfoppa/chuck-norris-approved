@@ -1,5 +1,5 @@
 
-import logo from '../../assets/images/apruvédi.png'
+import logo from '../assets/images/apruvédi.png'
 
 export const Logo = () => {
   return(

@@ -5,7 +5,7 @@ import { Suspense } from "solid-js"
 import './index.css'
 import App from './App'
 
-import { Loading, Sizes, Types } from './components/Loading/Loading'
+import { Loading, Sizes, Types } from './components/Loading'
 
 const root = document.getElementById('root')
 

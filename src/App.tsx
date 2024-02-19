@@ -1,7 +1,7 @@
 import { createResource } from 'solid-js'
-import { SegmentedControl } from './components/SegmentedControl/SegmentedControl.component';
+import { SegmentedControl } from './components/SegmentedControl.component';
 import { fetchCategories } from './services/fetchCategories.service';
-import { Logo } from './components/Logo/Logo';
+import { Logo } from './components/Logo';
 
 function App() {
 

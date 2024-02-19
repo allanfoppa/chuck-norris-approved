@@ -1,7 +1,7 @@
 import { Resource, For, createSignal, createEffect, Show  } from 'solid-js'
-import { fetchByCategory } from '../../services/fetchByCategory.service'
-import { Loading, Sizes, Types } from '../Loading/Loading'
-import { ChuckApproves } from '../ChuckApproves/ChuckApproves'
+import { fetchByCategory } from '../services/fetchByCategory.service'
+import { Loading, Sizes, Types } from './Loading'
+import { ChuckApproves } from './ChuckApproves/ChuckApproves'
 
 interface JokeByCategory {
   categories: string[],
