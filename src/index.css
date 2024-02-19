@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Chuck Norris';
+  src: url('./assets/fonts/Chuck Norris.otf');
+}
+
 #root {
   padding: 2rem;
   text-align: center;
+}
+
+.text-with-chuck-norris {
+  font-family: 'Chuck Norris', Arial, sans-serif;
 }
 
 .quotation-marks {
@@ -15,4 +24,3 @@
   top: 4px;
   margin: 0 2px;
 }
-

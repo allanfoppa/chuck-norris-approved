@@ -1,28 +1,16 @@
 
-export enum Sizes{
-  ExtraSmall = 'xs',
-  Small = 'sm',
-  Medium = 'md',
-  Large = 'lg'
-}
-
-export enum Types{
-  Spinner = 'spinner',
-  Dots = 'dots',
-  Ball = 'ball',
-  Bars = 'bars',
-  Infinity = 'infinity'
-}
+import { SIZES } from "../enums/sizes.enum"
+import { LOADING } from "../enums/loading.enum"
 
 export interface IProps{
-  type: Types;
-  size: Sizes;
+  type: LOADING;
+  size: SIZES;
 }
 
 export const Loading = ({
   type,
   size
-}: IProps) => {
+}: IProps ) => {
   return(
     <span class={`loading loading-${type} loading-${size}`}></span>
   )

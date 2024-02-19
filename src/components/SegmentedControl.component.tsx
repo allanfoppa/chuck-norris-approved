@@ -1,6 +1,8 @@
 import { Resource, For, createSignal, createEffect, Show  } from 'solid-js'
 import { fetchByCategory } from '../services/fetchByCategory.service'
-import { Loading, Sizes, Types } from './Loading'
+import { Loading } from './Loading'
+import { LOADING } from '../enums/loading.enum'
+import { SIZES } from '../enums/sizes.enum'
 import { ChuckApproves } from './ChuckApproves/ChuckApproves'
 
 interface JokeByCategory {
@@ -96,7 +98,7 @@ export const SegmentedControl = ({
         </For>
       </div>
       <div>
-        <Show when={loading() == false} fallback={<Loading type={Types.Dots} size={Sizes.Large} />}>
+        <Show when={loading() == false} fallback={<Loading type={LOADING.Dots} size={SIZES.Large} />}>
           <blockquote>
             <p class='text-lg'>
               <span class='quotation-marks'>“</span>
@@ -106,7 +108,7 @@ export const SegmentedControl = ({
           </blockquote>
         </Show>
       </div>
-      <div class='mt-8'>
+      <div class='mt-0'>
         Get me a new one ... (press <kbd class="kbd kbd-sm">r</kbd> to refresh)
       </div>
       <Show when={count() == 10}>

@@ -31,6 +31,14 @@ WIP
    npm run dev
    ```
 
+## Thank you
+
+Huge shoutout to the awesome web tools out there that helped me snag all the assets for this little study project! Saved me a ton of effort.
+
+- [Chuck Norris API](https://api.chucknorris.io/)
+- [Avatar in pixels](https://www.avatarsinpixels.com/)
+- [Dafont](https://www.dafont.com/)
+
 ## Contributing
 
 Any contributions you make are **greatly appreciated**.
