@@ -45,7 +45,7 @@ Looking at the state of javascript website, the framework with the most interest
    npm run dev
    ```
 
-## Thank you
+## THANK YOU
 
 Thanks to these web tools that helped me with all the resources for this small study project! Saved me a lot of effort.
 
@@ -53,6 +53,7 @@ Thanks to these web tools that helped me with all the resources for this small s
 - [Avatar in pixels](https://www.avatarsinpixels.com/)
 - [Dafont](https://www.dafont.com/)
 
-## Contributing
+## FINAL CONSIDERATIONS
 
-Any contributions you make are **greatly appreciated**.
+This application is a practice project built to explore technologies and concepts. It's not intended for commercial use and may not adhere to best practices for production environments.
+Feel free to explore, contribute, or provide feedback. Thank you for checking it out!
